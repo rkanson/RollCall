@@ -4,10 +4,8 @@
     <p>{{description}}</p>
     <a href="/group/{{_id}}">View Details</a>
     <i class="fa fa-trash"></i>
-    {{#if inMasterList}}
-      <button class="btn-deny toggle-menu">Unsubscribe from Group</button>
-    {{else}}
+    {{#unless inMasterList}}
       <button class="btn-primary toggle-menu">Subscribe to Group</button>
-    {{/if}}
+    {{/unless}}
   </article>
 </template>

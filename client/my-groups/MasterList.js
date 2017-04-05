@@ -10,3 +10,9 @@ Template.MasterList.helpers({
     return Groups.find({inMasterList: true});
   }
 });
+
+Template.MasterList.events({
+  'click .toggle-menu': function() {
+      Meteor.call('toggleMenuItem', this._id, this.inMasterList);
+  }
+});
