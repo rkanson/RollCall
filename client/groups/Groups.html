@@ -1,0 +1,10 @@
+<template name="Groups">
+  {{> NewGroup}}
+  <section class="groups">
+    {{#if Template.subscriptionsReady}}
+    {{#each groups}}
+      {{> SingleGroup}}
+    {{/each}}
+    {{/if}}
+  </section>
+</template>

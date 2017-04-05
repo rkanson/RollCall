@@ -1,0 +1,17 @@
+<template name="MasterList">
+  <h1 class="page-title">Current Subscribed Groups</h1>
+  {{#each groups}}
+    {{> MasterListItem}}
+  {{else }}
+    <h3>No Currently Subscribed Groups</h3>
+    <a href="/all-groups">Find Groups Here</a>
+  {{/each}}
+</template>
+
+<template name="MasterListItem">
+  <div class="masterlist-item">
+    <h3>{{name}}</h3>
+    <p>{{description}}</p>
+    <a href="/group/{{_id}}">View Details</a>
+  </div>
+</template>

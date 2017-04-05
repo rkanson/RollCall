@@ -1,0 +1,13 @@
+<template name="SingleGroup">
+  <article class="group {{#if inMasterList}}inMasterList{{/if}}">
+    <h3>{{name}}</h3>
+    <p>{{description}}</p>
+    <a href="/group/{{_id}}">View Details</a>
+    <i class="fa fa-trash"></i>
+    {{#if inMasterList}}
+      <button class="btn-deny toggle-menu">Unsubscribe from Group</button>
+    {{else}}
+      <button class="btn-primary toggle-menu">Subscribe to Group</button>
+    {{/if}}
+  </article>
+</template>
