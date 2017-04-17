@@ -11,8 +11,14 @@
 <template name="MasterListItem">
   <div class="masterlist-item">
     <h3>{{name}}</h3>
+    {{#if editMode}}
+      {{> quickForm collection="Groups" id=updateGroupID type="update" doc=this autosave=true}}
+    {{else}}
     <p>{{description}}</p>
     <a href="/group/{{_id}}">View Details</a>
     <button class="btn-deny toggle-menu">Unsubscribe from Group</button>
+    {{/if}}
+    <i class="fa fa-pencil"></i>
+    <i class="fa fa-trash"></i>
   </div>
 </template>
