@@ -1,12 +1,8 @@
 {
-  "public": {
-    "ga": {
-      "account": {
-
-      }
-    }
-  },
-  "private": {
-    
-  }
+  "galaxy.meteor.com": {
+     "env": {
+       "ROOT_URL": "http://rollcallcs490.meteorapp.com",
+       "MONGO_URL": "mongodb://rollcallAdmin:rollcallPassword@ds155160.mlab.com:55160/rollcall_mongodb"
+     }
+   }
 }
