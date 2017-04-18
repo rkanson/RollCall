@@ -1,5 +1,9 @@
 <template name="AllGroups">
+  {{#if $.Session.get 'newGroup'}}
   {{> NewGroup}}
+  {{else}}
+  <button class="new-group">New Group</button>
+  {{/if}}
   <section class="groups">
     {{#if Template.subscriptionsReady}}
     {{#each groups}}

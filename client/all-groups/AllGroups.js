@@ -10,3 +10,9 @@ Template.AllGroups.helpers({
     return Groups.find({});
   }
 });
+
+Template.AllGroups.events({
+  'click .new-group': () => {
+    Session.set('newGroup', true);
+  }
+});
