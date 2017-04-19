@@ -16,7 +16,6 @@ Template.NoteDetail.helpers({
 Template.NoteDetail.events({
   'click .fa-trash': function() {
     var nID = FlowRouter.getParam('noteid');
-    console.log(nID);
     Meteor.call('deleteNote', nID);
   }
 });

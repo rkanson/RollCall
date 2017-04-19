@@ -8,6 +8,14 @@ Template.MasterList.onCreated(function() {
 Template.MasterList.helpers({
   groups: ()=> {
     return Groups.find({inMasterList: true});
+  },
+  groupAdmin: function() {
+    if(Meteor.userId() == this.administrator) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 });
 

@@ -20,5 +20,13 @@ Template.SingleGroup.helpers({
   },
   editMode: function() {
     return Template.instance().editMode.get();
+  },
+  groupAdmin: function() {
+    if(Meteor.userId() == this.administrator) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 });

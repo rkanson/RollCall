@@ -18,7 +18,9 @@
     <a href="/group/{{_id}}">View Details</a>
     <button class="btn-deny toggle-menu">Unsubscribe from Group</button>
     {{/if}}
+    {{#if groupAdmin}}
     <i class="fa fa-pencil"></i>
     <i class="fa fa-trash"></i>
+    {{/if}}
   </div>
 </template>

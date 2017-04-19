@@ -2,9 +2,7 @@
     <select name="Notes By Date" id="noteByDate">
         <option value="" disabled selected>Select a Date</option>
     {{#each notes}}
-    {{#if notes.group = group._id}}
         <option value="{{_id}}">{{date}}</option>
-    {{/if}}
     {{/each}}
     </select>
     <textarea id="inputNotes"></textarea>
