@@ -1,0 +1,9 @@
+<template name="NoteDetail">
+  <div class="group">
+    {{#each notes}}
+    <h3>{{date}}</h3>
+      {{content}}
+    {{/each}}
+    <i class="fa fa-trash"></i>
+  </div>
+</template>

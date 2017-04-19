@@ -41,17 +41,4 @@ GroupSchema = new SimpleSchema({
   }
 });
 
-Meteor.methods({
-  toggleMenuItem: function(id, currentState) {
-    Groups.update(id, {
-      $set: {
-        inMasterList: !currentState
-      }
-    });
-  },
-  deleteGroup: function(id) {
-    Groups.remove(id);
-  }
-});
-
 Groups.attachSchema(GroupSchema);

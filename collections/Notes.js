@@ -4,36 +4,28 @@ SimpleSchema.extendOptions(['autoform']);
 Notes = new Mongo.Collection('notes');
 
 Notes.allow({
-  insert: function(userId, doc) {
-    return !!userId;
+  insert: function() {
+    return true;
   },
-  update: function(userId, doc) {
-    return !!userId;
+  update: function() {
+    return true;
   }
 });
 
 NotesSchema = new SimpleSchema({
   date: {
       type: Date,
-      optional: true,
       autoform: {
          type: 'date'
       }
    },
-   notes: {
+   content: {
      type: String,
      label: "Meeting Notes"
    },
    group: {
      type: String,
-     label: "Group Notes Belong To",
-     autoform: {
-       type: "hidden"
-     }
-   },
-   creator: {
-     type: String,
-     label: "Creator of the Notes",
+     label: "Group ID Notes Belong To",
      autoform: {
        type: "hidden"
      }
